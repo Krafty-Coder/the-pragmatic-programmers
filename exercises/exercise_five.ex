@@ -7,3 +7,7 @@
 # "Mrs Smith"
 # iex> prefix.("Elixir").("Rocks")
 # "Elixir Rocks"
+
+prefix = fn pr -> (fn name -> "#{pr} #{name}" end) end
+
+prefix.("Mrs").("Monica")
